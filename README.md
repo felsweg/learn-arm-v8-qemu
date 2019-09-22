@@ -90,3 +90,5 @@ Ending the debug session will clean up the running container.
 
 1) Azeria Labs - https://azeria-labs.com/writing-arm-assembly-part-1/
 2) The linker script is shamelessly stolen from [Jim Huang (JServ)](https://github.com/jserv/armv8-hello)
+3) [Armv8 Programmers Guide]( https://static.docs.arm.com/den0024/a/DEN0024A_v8_architecture_PG.pdf
+)
