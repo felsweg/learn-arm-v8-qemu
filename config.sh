@@ -27,7 +27,7 @@ then
     # printf "qemu-${SUFFIX}" >> .container
 fi
 
-# qemu-system-arm -machine virt -singlestep -gdb tcp::8887 -semihosting-config enable=on,target=native -S -nographic main
+# qemu-system-arm -machine virt -singlestep -gdb tcp::8887 -semihosting-config enable=on,target=native -S -nographic kernel.elf
 # install gdb
 printf "install gdb-multiarch (y/n)? "
 read INSTALL_GDB

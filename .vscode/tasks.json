@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command" : "make"
+        },
+        {
+            "label": "launch",
+            "dependsOn" : "build",
+            "command" : "./launch.sh"
+        },
+        {
+            "label": "stop",
+            "command" : "./stop.sh"
+        }
+    ]
+}

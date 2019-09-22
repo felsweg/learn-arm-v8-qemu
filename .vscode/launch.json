@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach Debug to Qemu",
+            "type": "gdb",
+            "request": "attach",
+            "gdbpath": "/usr/bin/gdb-multiarch",
+            "executable": "${workspaceFolder}/target/kernel.elf",
+            "target": "localhost:8887",
+            "remote": true,
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText",
+            "preLaunchTask": "launch",
+            "postDebugTask": "stop"
+        }
+    ]
+}
