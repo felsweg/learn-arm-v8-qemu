@@ -86,9 +86,12 @@ additionally, we also need a `tasks.json` as well
 To debug the main assembly file ( `main.s` ) you should have `Native Debug` for Visual Code installed. Pressing F5 will build the program, and start qemu with a gdb server run. 
 Ending the debug session will clean up the running container. 
 
+## Debugging
+
+Visual Code does not have a register or memory view [yet](https://github.com/Microsoft/vscode-cpptools/issues/941). However it is possible to obtain information from the registers by typing `info registers` in the debug console during a debug sessions.
+
 # Resources / References
 
 1) Azeria Labs - https://azeria-labs.com/writing-arm-assembly-part-1/
 2) The linker script is shamelessly stolen from [Jim Huang (JServ)](https://github.com/jserv/armv8-hello)
-3) [Armv8 Programmers Guide]( https://static.docs.arm.com/den0024/a/DEN0024A_v8_architecture_PG.pdf
-)
+3) [Armv8 Programmers Guide](https://static.docs.arm.com/den0024/a/DEN0024A_v8_architecture_PG.pdf)

@@ -14,7 +14,8 @@ $(OUT_DIR)/main.o: main.s
 	@$(CC) main.s -c -g -o $(OUT_DIR)/main.o
 	
 $(OUT_DIR)/$(IMAGE): $(OUT_DIR)/main.o
-	@$(LD) $(OUT_DIR)/main.o -T default.ld -o $(OUT_DIR)/$(IMAGE)
+	@$(LD) $(OUT_DIR)/main.o -o $(OUT_DIR)/$(IMAGE)
+	# @$(LD) $(OUT_DIR)/main.o -T default.ld -o $(OUT_DIR)/$(IMAGE)
 
 clean:
 	@rm -rf $(OUT_DIR)
