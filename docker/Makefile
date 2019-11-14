@@ -2,7 +2,7 @@ PWD ?= $(shell pwd)
 IMAGE := kernel.elf
 
 OUT_DIR=$(PWD)/target
-COMPILE=aarch64-linux-gnu
+COMPILE=arm-none-eabi
 CC=$(COMPILE)-as
 LD=$(COMPILE)-ld
 
@@ -14,8 +14,7 @@ $(OUT_DIR)/main.o: main.s
 	@$(CC) main.s -c -g -o $(OUT_DIR)/main.o
 	
 $(OUT_DIR)/$(IMAGE): $(OUT_DIR)/main.o
-	@$(LD) $(OUT_DIR)/main.o -o $(OUT_DIR)/$(IMAGE)
-	# @$(LD) $(OUT_DIR)/main.o -T default.ld -o $(OUT_DIR)/$(IMAGE)
+	@$(LD) $(OUT_DIR)/main.o -T default.ld -o $(OUT_DIR)/$(IMAGE)
 
 clean:
 	@rm -rf $(OUT_DIR)

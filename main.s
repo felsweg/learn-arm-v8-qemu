@@ -1,12 +1,21 @@
+.data
+
+sequence:
+    .word 1,2,3,4
+
 
 .text
 .global _start
 _start:
-    # destination, source, op1, 
-    mov X0, #1
-    mov X1, #4
-    eor X2, X2, X2
-    sub X1, X1, #1
+    
+    mov r0, #1
+    ldr r1, =sequence   @ load address of array "sequence" into r1
 
-    # loop
-    b _start
+loop:
+    ldr r2, [r1], #4    @ immediate post-indexed address mode. the contents of r1
+                        @ gets loaded into r2, after that the address of r1 will be
+                        @ update by 4 (bytes).
+    mov r0, #2
+
+    # branch unconditionally to label: 'loop'
+    b loop
