@@ -90,8 +90,13 @@ Ending the debug session will clean up the running container.
 
 Visual Code does not have a register or memory view [yet](https://github.com/Microsoft/vscode-cpptools/issues/941). However it is possible to obtain information from the registers by typing `info registers` in the debug console during a debug sessions.
 
+# Updates
+
+|Date (DD/MM/YYYY)| Description |
+|:-|:-|
+|14/11/2010| Split development to two branches: <br> `master-armv8` for aarch64<br> `master-armv7` for arm-v7 / arm32 development<br><br>Qemu will use <br> `cortex-a57` and <br> `cortex-a15`<br> for `aarch64` and `arm32` respectively
+
 # Resources / References
 
 1) Azeria Labs - https://azeria-labs.com/writing-arm-assembly-part-1/
-2) The linker script is shamelessly stolen from [Jim Huang (JServ)](https://github.com/jserv/armv8-hello)
-3) [Armv8 Programmers Guide](https://static.docs.arm.com/den0024/a/DEN0024A_v8_architecture_PG.pdf)
+2) [Armv8 Programmers Guide](https://static.docs.arm.com/den0024/a/DEN0024A_v8_architecture_PG.pdf)
